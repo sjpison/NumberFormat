@@ -12,6 +12,9 @@ var nf2 = new NumberFormat({
                             'currencyDisplay':'symbol',
                             'useIntl':false // Default: true
                         });
+
+nf.format(30000000);    // 30,000,000
+nf2.format('30000000'); // ₩ 30,000,000
 </script>
 ```
 
