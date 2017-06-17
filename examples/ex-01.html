@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="../NumberFormat.js"></script>
+    </head>
+    <body>
+        <h1>NumberFormat</h1>
+
+        <p>Number 30000000 : <span id="number-30000000"></span></p>
+        <p>String 30000000 : <span id="string-30000000"></span></p>
+
+        <script>
+        var nf = new NumberFormat();
+        var nf2 = new NumberFormat({
+                                    'style':'currency',
+                                    'currency':'KRW',
+                                    'currencyDisplay':'symbol',
+                                    'useIntl':false
+                                });
+
+        document.getElementById('number-30000000').innerHTML = nf.format(30000000);
+        document.getElementById('string-30000000').innerHTML = nf2.format('30000000');
+        </script>
+    </body>
+</html>
