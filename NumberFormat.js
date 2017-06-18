@@ -55,7 +55,7 @@ Developed by: Pison	(codemission.org)
                 name: 'Japanese yen'
             },
             'CNY':{
-                symbol:'CN¥',
+                symbol:'元',
                 name: 'Chinese yuan'
             }
         }
