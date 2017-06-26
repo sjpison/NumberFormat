@@ -1,6 +1,6 @@
 /**
 NumberFormat.js
-@Version 0.1.0
+@Version 0.1.1
 Developed by: Pison	(codemission.org)
 **/
 
@@ -65,6 +65,13 @@ Developed by: Pison	(codemission.org)
         var number = '';
         var cutlen = 3;
         var comma = ',';
+        var decimal = '';
+
+        if(data.indexOf('.')>-1) {
+            var tmp_token = data.split('.');
+            data = tmp_token[0];
+            decimal = tmp_token[1];
+        }
        
         var len = data.length;
         var mod = (len % cutlen);
@@ -79,6 +86,9 @@ Developed by: Pison	(codemission.org)
                     k = 0;
                 }
             }
+        }
+        if(decimal.length>0) {
+            number += '.'+decimal;
         }
 
         if(this.options.style=='currency') {

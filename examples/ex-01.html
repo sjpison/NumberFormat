@@ -10,6 +10,7 @@
 
         <p>Number 30000000 : <span id="number-30000000"></span></p>
         <p>String 30000000 : <span id="string-30000000"></span></p>
+        <p>String 12345.333 : <span id="float-12345333"></span></p>
 
         <script>
         var nf = new NumberFormat();
@@ -19,9 +20,11 @@
                                     'currencyDisplay':'symbol',
                                     'useIntl':false
                                 });
+        var nf3 = new NumberFormat({'useIntl':false});
 
         document.getElementById('number-30000000').innerHTML = nf.format(30000000);
         document.getElementById('string-30000000').innerHTML = nf2.format('30000000');
+        document.getElementById('float-12345333').innerHTML = nf3.format('12345.333');
         </script>
     </body>
 </html>
